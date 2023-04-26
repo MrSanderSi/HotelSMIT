@@ -3,6 +3,19 @@
 <PageTitle>Hotel Room Management</PageTitle>
 
 <h1>Add new room</h1>
-
-
-<button class="btn btn-primary" @onclick="() => AddRoom(1, 1, 68M)">Add Hotel Room</button>
+<EditForm Model="RoomModel">
+	<DataAnnotationsValidator />
+	<div class="mb-2">
+		<label for="roomNumber">Room number: </label>
+		<InputNumber TValue="int" id="roomNumber" @bind-Value="RoomModel.RoomNumber"/>
+	</div>
+	<div class="mb-2">
+		<label for="bedCount">Amount of beds: </label>
+		<InputNumber TValue="int" id="bedCount" @bind-Value="RoomModel.BedCount"/>
+	</div>
+	<div class="col-6">
+		<label for="roomPrice">Price: </label>
+		<InputNumber TValue="decimal" id="roomPrice" @bind-Value="RoomModel.Price"/>
+	</div>
+	<input type="submit" class="btn btn-primary" value="Save" @onclick="() => AddRoom()"/>
+</EditForm>
