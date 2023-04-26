@@ -1,9 +1,13 @@
 ﻿using HotelSMIT.Data.Constants;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace HotelSMIT.Data.Models
 {
 	public class BookedRoom
 	{
+		[Key]
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 
 		public User User { get; set; }

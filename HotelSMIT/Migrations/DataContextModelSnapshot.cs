@@ -48,7 +48,7 @@ namespace HotelSMIT.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BookedRoom");
+                    b.ToTable("BookedRoom", (string)null);
                 });
 
             modelBuilder.Entity("HotelSMIT.Data.Models.HotelRoom", b =>
@@ -73,7 +73,7 @@ namespace HotelSMIT.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HotelRoom");
+                    b.ToTable("HotelRoom", (string)null);
                 });
 
             modelBuilder.Entity("HotelSMIT.Data.Models.User", b =>
@@ -109,7 +109,7 @@ namespace HotelSMIT.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("HotelSMIT.Data.Models.BookedRoom", b =>
